@@ -5,12 +5,14 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Practice from './practice';
+import Image from './images/pic.jpg'
 const Login=()=>{
 
-    const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
+    const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto",backgroundColor:'transparent', backdropFilter:'blur(5px)'
+}
     const avatarStyle={backgroundColor:'#1bbd7e'}
     const btnstyle={margin:'8px 0'}
-    return(<>
+    return(<div style={{backgroundImage:`url(${Image})`}}>
   
          
         <Grid>
@@ -44,7 +46,7 @@ const Login=()=>{
 
  <Route path="/practice" component={Practice} />  </BrowserRouter>
           
-</>
+</div>
 
     )
 }

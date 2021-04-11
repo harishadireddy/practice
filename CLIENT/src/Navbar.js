@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Route,Link} from 'react-router-dom';
+import {  Route,Link, Switch} from 'react-router-dom';
 import App from './counter';
 import Login from './Form';
 import Header from './compnents/Header';
@@ -28,11 +28,13 @@ const Navbar = () =>{
    
     <Divider/>
     <div>
+        <Switch>
        <Route exact path='/' component={App} /> 
       <Route path="/Login" component={Login} />
        
         <Route path="/Header" component={Header} />
           <Route path="/slider" component={Glider} />
+          </Switch>
     </div>
 
        

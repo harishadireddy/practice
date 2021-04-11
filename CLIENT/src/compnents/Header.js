@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import {motion} from 'framer-motion'
 import { Grid } from '@material-ui/core';
+import Image from '../images/pic.jpg'
 
 
 const useStyles = makeStyles(theme => ({
@@ -11,10 +12,12 @@ const useStyles = makeStyles(theme => ({
     height: 150,
     width: 200,
     margin:"20px auto",
-    backgroundColor:"RED",
+    backgroundColor:"transparent",
+    backdropFilter:'blur(3px)',
     color:"yellow",
     textAlign: "center",
-    animation: "$slideDown 2.9s"
+    animation: "$slideDown 2.9s",
+ 
     
 
     
@@ -29,9 +32,11 @@ const useStyles = makeStyles(theme => ({
     width: 200,
     margin:"20px auto",
     backgroundColor:"yellow",
+    backdropFilter:'blur(5px)',
     color:"red",
     textAlign: "center",
     transition: '1s' ,
+
 
 
   }
@@ -42,7 +47,7 @@ function PaperSheet() {
 
 
   return (
-    <div>
+    <div style={{backgroundImage: `url(${Image})`}}>
       <Grid container direction="row" alignItems="center" justify="center" spacing={6} >
                   
                   <Grid item >
